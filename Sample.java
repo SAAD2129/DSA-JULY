@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class Sample {
+    
     public static void towerOfHanoi(int n, String src, String helper, String dest) {
         if (n == 1) {
             System.out.println("Transfer disk " + n + " from " + src + " to " + dest);
