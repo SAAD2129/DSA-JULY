@@ -48,7 +48,7 @@ void Merge(int a[], int left, int m, int right)
     }
 }
 void MergeSort(int a[], int l, int r)
-{   
+{
     if (l < r)
     {
         int m = (l + r) / 2; // {4, 1, 3, 9, 7};//0 4
@@ -70,7 +70,7 @@ int main()
 
     int arr[] = {4, 1, 3, 9, 7};
     int n = sizeof(arr) / sizeof(int);
-    MergeSort(arr, 0, n-1);
+    MergeSort(arr, 0, n - 1);
     PrArray(arr, n);
     return 0;
 }
