@@ -87,7 +87,7 @@
 //         }
 //     }
 //     int pop()
-    
+
 //     {
 //         if (!q1.empty())
 //         {
@@ -117,38 +117,37 @@
 //     // cout<<q->data;
 //     return 0;
 // }
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 
 /****** SAAD A PEACEFUL SOUL ******/
 
 using namespace std;
 
-int main(){
+int main()
+{
 
-    queue<int> q;
-    q.push(1);
-    q.push(2);
-    q.push(3);
-    int k=3;
-    stack<int> aux;
-    for (int i = 0; i < k; i++)
-    {
-        aux.push(q.front());
-        q.pop();
-    }
-    for (int i = 0; i < k; i++)
-    {
-        // q.front()=aux.top();
-        cout<<aux.top();
-        aux.pop();
-    }
-    for (int i = 0; i < k; i++)
-    {
-        cout<<q.front();
-        q.pop();
-    }
-    
-    
-    
-    return 0;
+	queue<int> q;
+	q.push(1);
+	q.push(2);
+	q.push(3);
+	int k = 3;
+	stack<int> aux;
+	for (int i = 0; i < k; i++)
+	{
+		aux.push(q.front());
+		q.pop();
+	}
+	for (int i = 0; i < k; i++)
+	{
+		// q.front()=aux.top();
+		cout << aux.top();
+		aux.pop();
+	}
+	for (int i = 0; i < k; i++)
+	{
+		cout << q.front();
+		q.pop();
+	}
+
+	return 0;
 }

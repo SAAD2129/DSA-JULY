@@ -1,0 +1,12 @@
+{
+       "editor.tabSize": 7,
+       "prettier.tabWidth": 4,
+       "editor.lineHeight": 1.92,
+       "files.autoSave": "afterDelay",
+       "files.autoSaveDelay": 500,
+       "editor.smoothScrolling": true,
+       "editor.fontSize": 15,
+       "editor.fontWeight": "bold",
+       "editor.experimental.stickyScroll.enabled": true,
+       "editor.stickyTabStops": true
+}

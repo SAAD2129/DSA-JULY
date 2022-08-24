@@ -7,6 +7,7 @@ using namespace std;
 // GLOBAL VARIABLES
 
 bool check = false;
+
 // NODE CREATING CLASS
 class Node
 {
