@@ -1,0 +1,1 @@
+{"name":"Local: Pokemons","url":"e:\\ALL CODING\\DSA-JULY\\CodeChef\\Pokemons.cpp","tests":[{"id":1662798198271,"input":"1\n2\n1 2\n2 1","output":"1\n2\n2\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\ALL CODING\\DSA-JULY\\CodeChef\\Pokemons.cpp","group":"local","local":true}

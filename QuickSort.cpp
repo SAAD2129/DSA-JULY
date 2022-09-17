@@ -6,9 +6,6 @@ using namespace std;
 
 void Swap(int arr[], int s, int e)
 {
-    // arr[s] = arr[s] ^ arr[e];
-    // arr[e] = arr[s] ^ arr[e];
-    // arr[s] = arr[s] ^ arr[e];
     int temp = arr[s];
     arr[s] = arr[e];
     arr[e] = temp;
