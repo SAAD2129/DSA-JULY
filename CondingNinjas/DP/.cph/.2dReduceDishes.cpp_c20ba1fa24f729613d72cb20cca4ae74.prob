@@ -1,0 +1,1 @@
+{"name":"Local: 2dReduceDishes","url":"e:\\ALL CODING\\DSA-JULY\\CondingNinjas\\DP\\2dReduceDishes.cpp","tests":[{"id":1663727047556,"input":"2\n5\n-1 -8 0 5 -9\n3\n4 3 2","output":"14\n20"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\ALL CODING\\DSA-JULY\\CondingNinjas\\DP\\2dReduceDishes.cpp","group":"local","local":true}

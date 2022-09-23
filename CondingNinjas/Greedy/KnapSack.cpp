@@ -21,61 +21,44 @@ const int MOD = 1e9 + 7;
 
 using namespace std;
 
-int IndianCoinChange(vi & A, int x){
+bool compare(pii &a, pii &b){
 
-    sort(A.begin(), A.end(),greater<int>());
-    int ans = 0;
-    rep( i, 0, A.size() ) {
-
-        ans += x/A[i];
-        x -= x/A[i] * A[i];
-    }
-    return ans;
-}
-
-bool compare(pii &a, pii &b)
-{
-    double v1 = a.ff *1.0 / a.ss;
-    double v2 = b.ff *1.0 / b.ss;
+    double v1 = a.ff * 1.0/a.ss;
+    double v2 = b.ff * 1.0/b.ss;
 
     return v1 > v2;
 }
-int TheifProfitMax(vector<pii> &A, int w){
+int KnapSack(vector<pii> &A, int w){
 
+    int n = A.size();
     sort(A.begin(),A.end(),compare);
-
-    int ans = 0;
-    rep( i, 0, A.size() ) {
-    
-        cout << A[i].ff << " " << A[i].ss << " " << A[i].ff *1.0 / A[i].ss << endl;
-    }
-    rep(i, 0, A.size()){
-
-        if(w >= A[i].ss){//94 
+    double ans = 0;
+    rep( i, 0, n ) {
+        
+        if(w >= A[i].ss){//20
             ans += A[i].ff;
             w -= A[i].ss;
             continue;
         }
-        double vw = A[i].ff *1.0 / A[i].ss;
-        ans += vw * w;
+        double w8now = w * A[i].ff / A[i].ss;
+        ans += w8now;
         w = 0;
         break;
     }
+
     return ans;
+
 }
 //Driver Code 
 int main(){
 
     int n , w;
     cin >> n >> w;
-
     vector<pii> A(n);
     rep( i, 0, n ) {
     
         cin >> A[i].ff >> A[i].ss;
     }
-
-    cout << TheifProfitMax(A,w) << endl;
-
+    cout << KnapSack(A,w) << endl;
     return 0;
 }

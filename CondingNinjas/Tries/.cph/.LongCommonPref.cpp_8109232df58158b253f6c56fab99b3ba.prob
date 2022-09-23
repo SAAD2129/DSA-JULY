@@ -1,0 +1,1 @@
+{"name":"Local: LongCommonPref","url":"e:\\ALL CODING\\DSA-JULY\\CondingNinjas\\Tries\\LongCommonPref.cpp","tests":[{"id":1663799560282,"input":"3\ncoding\ncoders\ncoz","output":"cod"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\ALL CODING\\DSA-JULY\\CondingNinjas\\Tries\\LongCommonPref.cpp","group":"local","local":true}

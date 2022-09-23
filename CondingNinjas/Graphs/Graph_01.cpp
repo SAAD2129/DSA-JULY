@@ -1,9 +1,26 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
+
+#define ll long long
+#define lli ll int
+#define vi vector<int>
+#define vs vector<string>
+#define vss vector<vs>
+#define vc vector<char>
+#define vii vector<vi>
+#define pii pair<int,int>
+#define vip vector<pii>
+#define ff first
+#define ss second
+#define rep(i,a,b) for(int i=a;i<b;i++)
+const int N = 1e6+3;
+const int MOD = 1e9 + 7;
 
 /*
- *** Saad a Peaceful Soul ***
- */
+    ***    Saad a Peaceful soul ⭐⭐⭐⭐⭐⭐⭐ 😁 Zindagi me maza Aana Chahye Bs  ***  
+*/
+
 using namespace std;
+
 template <typename T>
 class graph
 {
@@ -37,7 +54,6 @@ public:
     }
 };
 
-#include <bits/stdc++.h>
 
 void printAdj(unordered_map<int, set<int>> &adj, vector<pair<int, int>> &edges)
 {

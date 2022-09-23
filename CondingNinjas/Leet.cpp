@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 
 #define ll long long
 #define lli ll int
@@ -6,74 +6,65 @@
 #define vs vector<string>
 #define vss vector<vs>
 #define vc vector<char>
+#define vb vector<bool>
 #define vii vector<vi>
-#define pii pair<int,int>
+#define pii pair<int, int>
+#define vpii vector<pii>
 #define vip vector<pii>
 #define ff first
 #define ss second
-#define rep(i,a,b) for(int i=a;i<n;i++)
-const int N = 1e6+3;
+#define rep(i, a, b) for (int i = a; i < b; i++)
+const int N = 1e6 + 3;
 const int MOD = 1e9 + 7;
 
 /*
-    ***    Saad a Peaceful soul 7 Star ==> Zindagi me maza Aana Chahye Bs  ***  
-*/
+ ***    Saad a Peaceful soul ⭐⭐⭐⭐⭐⭐⭐ 😁 Zindagi me maza Aana Chahye Bs  ***
+ */
 
 using namespace std;
+vector<int> sumEvenAfterQueries(vector<int> &nums, vector<vector<int>> &queries)
+{
 
-// int countDaysTogether(string aA, string lA, string aB, string lB) {
+	vector<int> ans;
 
-//     int m1 = stoi( aA.substr(0,2));
-//     int m2 = stoi( aB.substr(0,2));
-//     if(m1 == m2){
+	int sum = 0;
+	for (int i = 0; i < nums.size(); ++i)
+	{
+		if (nums[i] % 2 == 0)
+			sum += nums[i];
+	}
+	// sum = 6;
+	int n = queries.size();
+	for (int i = 0; i < n; ++i){
 
-//         int d1 = 
-//     }
-//     cout << m1;
-// }
+		int num = nums[queries[i][1]];
+		nums[queries[i][1]] += queries[i][0];
+		if(queries[i][0] < 0 && (abs(queries[i][0]) | 1)){
+			sum += queries[i][0];
+		}
+		else if (nums[queries[i][1]] % 2 == 0){
+			sum += nums[queries[i][1]];
+		}
+		else{
+			if (num % 2 == 0)
+				sum -= num;
+		}
+		// cout << sum << endl;
+		ans.push_back(sum);
+	}
 
-
-int matchPlayersAndTrainers(vector<int>& players, vector<int>& trainers) {
-
-    int ans = 0;
-    int n = players.size();
-    int idx = 0;
-    sort(players.begin(),players.end());
-    sort(trainers.begin(),trainers.end());
-    for (int i = 0; i < n; i++)
-    {
-    
-        
-        if(idx >= trainers.size())
-            return ans;
-        while (idx < trainers.size())
-        {
-            if(players[i] <= trainers[idx]){
-                cout << "Matches " << players[i] << " " << trainers[idx] << endl;
-                ans++;
-                idx++;
-            }
-        }
-        
-        
-    }
-    
-    // 8,8 5 2 
-    return ans; 
+	return ans;
 }
-int main(){
+// Driver Code
+int main()
+{
 
-    // string arriveAlice = "08-15", leaveAlice = "08-18", arriveBob = "08-16", leaveBob = "08-19";
-    // countDaysTogether(arriveAlice,leaveAlice,arriveBob,leaveBob);
-    vi players = {4,7,9}, trainers = {8,2,5,8};
-    // 1 1000000 1 100000
-    cout << matchPlayersAndTrainers(players,trainers) << endl;
-    /*
-    [4,7,9]
-[8,2,5,8]
-[1,1,1]
-[10]
-    */
+	vi nums = {1, 2, 3, 4};
+	vii queries = {{1, 0}, {-3, 1}, {-4, 0}, {2, 3}};
 
-    return 0;
+	vi ans = sumEvenAfterQueries(nums, queries);
+	for (auto j : ans)
+		cout << j << " ";
+
+	return 0;
 }
