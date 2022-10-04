@@ -28,21 +28,17 @@ class graph
 public:
     map<T, vector<T>> adj;
 
-    void adEdge(T u, T v, bool direction)
-    {
+    void adEdge(T u, T v, bool direction){
 
         adj[u].push_back(v);
-        if (direction == 0)
-        {
+        if (direction == 0){
             adj[v].push_back(u);
         }
     }
 
-    void PrintListAdj()
-    {
+    void PrintListAdj(){
 
-        for (auto i : adj)
-        {
+        for (auto i : adj){
 
             cout << i.first << " -> ";
             for (auto j : i.second)
@@ -55,19 +51,16 @@ public:
 };
 
 
-void printAdj(unordered_map<int, set<int>> &adj, vector<pair<int, int>> &edges)
-{
+void printAdj(unordered_map<int, set<int>> &adj, vector<pair<int, int>> &edges){
 
-    for (int i = 0; i < edges.size(); ++i)
-    {
+    for (int i = 0; i < edges.size(); ++i){
 
         int u = edges[i].first;  // 0
         int v = edges[i].second; // 1
         adj[u].insert(v);
         adj[v].insert(u);
     }
-    for (auto i : adj)
-    {
+    for (auto i : adj){
 
         cout << i.first << " -> ";
         for (auto j : i.second)
@@ -102,37 +95,8 @@ void bfs(unordered_map<int, set<int>> &adj, unordered_map<int, bool> &visited, v
         }
     }
 }
-vector<int> BFS(int vertex, vector<pair<int, int>> edges)
-{
-    unordered_map<int, set<int>> adj;
-    vector<int> ans;
-    unordered_map<int, bool> visited;
-    printAdj(adj, edges);
 
-    for (int i = 0; i < vertex; ++i)
-    {
-        if (!visited[i])
-        {
-            bfs(adj, visited, ans, i);
-        }
-    }
-    return ans;
-}
 
-void dfs(int node, unordered_map<int, set<int>> &adjlist,
-         unordered_map<int, bool> &visited, vector<int> &comp)
-{
-
-    comp.push_back(node);
-    visited[node] = 1;
-    for (auto i : adjlist[node])
-    {
-        if (!visited[i])
-        {
-            dfs(i, adjlist, visited, comp);
-        }
-    }
-}
 vector<vector<int>> depthFirstSearch(int V, int E, vector<vector<int>> &edges)
 {
     unordered_map<int, set<int>> adjlist;

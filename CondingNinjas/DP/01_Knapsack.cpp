@@ -74,7 +74,7 @@ int main(){
         cin >> val[i];
     }
 
-    cout << knapSackTab(n,w) << endl;
-    // cout << knapSack(n,w) << endl;
+    // cout << knapSackTab(n,w) << endl;
+    cout << knapSack(n,w) << endl;
     return 0;
 }

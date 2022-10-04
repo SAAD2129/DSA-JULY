@@ -1,0 +1,1 @@
+{"name":"Local: Fraction","url":"e:\\ALL CODING\\DSA-JULY\\CondingNinjas\\OOPS\\Fraction.cpp","tests":[{"id":1664125439311,"input":"47 71\n3\n1 91 78\n2 67 75\n1 36 74","output":"67/156"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\ALL CODING\\DSA-JULY\\CondingNinjas\\OOPS\\Fraction.cpp","group":"local","local":true}

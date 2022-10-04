@@ -70,11 +70,17 @@
 		"valarray": "cpp"
 	},
 	"editor.tabSize": 5,
-	"editor.fontSize": 15,
+	"editor.fontSize": 15.2,
 	"window.commandCenter": false,
 	"window.title": "${dirty}${}${separator}${rootName}${separator}",
-	"editor.lineHeight": 1.5,
+	"editor.lineHeight": 0,
 	"terminal.integrated.fontSize": 15,
-	"editor.fontFamily": "'ubuntu mono'",
-	"code-runner.clearPreviousOutput": true
+	"editor.fontFamily": "'Consolas', 'ubuntu mono'",
+	"code-runner.clearPreviousOutput": true,
+	"editor.quickSuggestionsDelay": 1,
+	"editor.cursorWidth": 3,
+	"emmet.showSuggestionsAsSnippets": true,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.guides.bracketPairsHorizontal": false,
+	"editor.guides.bracketPairs": true
 }
