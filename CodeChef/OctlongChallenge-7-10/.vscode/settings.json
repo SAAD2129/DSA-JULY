@@ -1,0 +1,10 @@
+{
+	"files.associations": {
+		"ostream": "cpp"
+	},
+	"editor.wordWrap": "on",
+	"markdown.preview.lineHeight": 1.7,
+	"editor.lineHeight": 1.5,
+	"editor.fontSize": 15,
+	"editor.fontFamily": "'ubuntu mono'"
+}

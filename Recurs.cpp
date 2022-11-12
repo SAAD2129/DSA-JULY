@@ -35,3 +35,6 @@ int main()
     // 6 2 4
     return 0;
 }
+int main(){
+    cout << "hello World Welcome to the programmers world"
+}
